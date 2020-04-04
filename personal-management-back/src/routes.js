@@ -7,6 +7,8 @@ const routes = express.Router();
 // Rotas de Pessoa
 routes.get('/people', PeopleController.index);
 routes.post('/people', PeopleController.create);
+routes.put('/people/:peopleParamsId', PeopleController.update);
+routes.delete('/people/:peopleParamsId', PeopleController.delete);
 
 // Rotas de contatos
 routes.get('/contact', ContactController.index);
