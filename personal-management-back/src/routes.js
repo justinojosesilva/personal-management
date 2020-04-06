@@ -5,6 +5,7 @@ const GoalController = require('./controllers/GoalController');
 const AddressController = require('./controllers/AddressController');
 const LanguageController = require('./controllers/LanguageController');
 const CourseController = require('./controllers/CourseController');
+const KnowledgeController = require('./controllers/KnowledgeController');
 const ProfessionalExperienceController = require('./controllers/ProfessionalExperienceCoontroller');
 const ProfessionalAssignmentController = require('./controllers/ProfessionalAssignmentController');
 
@@ -45,6 +46,12 @@ routes.get('/course', CourseController.index);
 routes.post('/course', CourseController.create);
 routes.put('/course/:courseId', CourseController.update);
 routes.delete('/course/:courseId', CourseController.delete);
+
+// Rotas de Conhecimentos
+routes.get('/knowledge', KnowledgeController.index);
+routes.post('/knowledge', KnowledgeController.create);
+routes.put('/knowledge/:knowledgeId', KnowledgeController.update);
+routes.delete('/knowledge/:knowledgeId', KnowledgeController.delete);
 
 // Rotas de Experiências
 routes.get('/experience', ProfessionalExperienceController.index);

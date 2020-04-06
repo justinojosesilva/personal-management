@@ -4,7 +4,7 @@ exports.up = function(knex) {
         table.increments('courseId').primary();
         table.string('nameCourse').notNullable();
         table.string('institution').notNullable();
-        table.string('typeCourse',['PRESENCIAL','ONLINE']);
+        table.enu('typeCourse',['PRESENCIAL','ONLINE']);
         table.integer('durationCourse');
         table.date('initialDate').nullable();
         table.date('finalDate').nullable();
