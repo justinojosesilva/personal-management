@@ -13,7 +13,9 @@ exports.up = function(knex) {
       table.decimal('pretentionValuePJ');
       table.boolean('negotiableFlag');
       table.string('birthState', 2);
-      table.string('hometown')
+      table.string('hometown');
+      table.string('holderCPF').nullable();
+      table.string('nationality').nullable();
   })
 };
 

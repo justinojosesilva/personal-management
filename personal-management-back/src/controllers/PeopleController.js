@@ -21,7 +21,9 @@ module.exports = {
             pretentionValuePJ,
             negotiableFlag,
             birthState,
-            hometown
+            hometown,
+            holderCPF,
+            nationality
         } = request.body;
     
         const [peopleId] = await connection('people').insert({
@@ -37,6 +39,8 @@ module.exports = {
             negotiableFlag,
             birthState,
             hometown,
+            holderCPF,
+            nationality
         });
     
     
@@ -56,7 +60,9 @@ module.exports = {
             pretentionValuePJ,
             negotiableFlag,
             birthState,
-            hometown
+            hometown,
+            holderCPF,
+            nationality
         } = request.body;
         const {peopleParamsId} = request.params;
         const peopleId = request.headers.authorization;
@@ -84,7 +90,9 @@ module.exports = {
                 pretentionValuePJ,
                 negotiableFlag,
                 birthState,
-                hometown
+                hometown,
+                holderCPF,
+                nationality
             });
 
         return response.status(204).send();
