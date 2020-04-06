@@ -17,5 +17,5 @@ exports.up = function(knex) {
   };
   
   exports.down = function(knex) {
-      return knex.schema.dropTable('company');  
+      return knex.schema.dropTable('professional_experience');  
   };

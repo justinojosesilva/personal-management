@@ -3,6 +3,7 @@ const PeopleController = require('./controllers/PeopleController');
 const ContactController = require('./controllers/ContactController');
 const AddressController = require('./controllers/AddressController');
 const ProfessionalExperienceController = require('./controllers/ProfessionalExperienceCoontroller');
+const ProfessionalAssignmentController = require('./controllers/ProfessionalAssignmentController');
 
 const routes = express.Router();
 
@@ -29,6 +30,12 @@ routes.get('/experience', ProfessionalExperienceController.index);
 routes.post('/experience', ProfessionalExperienceController.create);
 routes.put('/experience/:experienceId', ProfessionalExperienceController.update);
 routes.delete('/experience/:experienceId', ProfessionalExperienceController.delete);
+
+// Rotas de Atrinbuições das Experiências
+routes.get('/assignment/:experience', ProfessionalAssignmentController.index);
+routes.post('/assignment/:experience', ProfessionalAssignmentController.create);
+routes.put('/assignment/:experienceId/:assignmentId', ProfessionalAssignmentController.update);
+routes.delete('/assignment/:experienceId/:assignmentId', ProfessionalAssignmentController.delete);
 
 
 module.exports = routes;
